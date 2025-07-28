@@ -9,7 +9,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className='flex justify-between py-5 sticky top-0 bg-white shadow-md'>
+            <div className='flex justify-between py-5 sticky top-0 bg-white'>
                 <Link to="/">
                     <img src={nikeLogo} alt="Logo" className='h-11 ml-20' ></img>
                 </Link>

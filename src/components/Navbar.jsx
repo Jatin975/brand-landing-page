@@ -3,7 +3,7 @@ import nikeLogo from '../assets/nike_logo.png'
 import PrimaryButton from './PrimaryButton'
 import { Link, NavLink } from 'react-router-dom';
 
-export default function Navbar({ isMobileView }) {
+export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     function handleNavlinkActive({ isActive }) {
@@ -25,51 +25,47 @@ export default function Navbar({ isMobileView }) {
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                             </svg>
                         </button>
-                        {!isMobileView &&
-                            <div className={` ${isOpen ? "block" : "hidden"} md:block flex justify-center`} id="navbar-default">
-                                <ul className="font-medium flex flex-col gap-1 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                                    <li>
-                                        <NavLink to="/" className={handleNavlinkActive} end>Home</NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink to="menu" className={handleNavlinkActive}>Menu</NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink to="location" className={handleNavlinkActive}>Location</NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink to="about" className={handleNavlinkActive} >About</NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink to="contact" className={handleNavlinkActive}>Contact</NavLink>
-                                    </li>
-                                </ul>
-                            </div>
-                        }
+                        <div className="hidden md:flex justify-center" id="navbar-default">
+                            <ul className="font-medium flex flex-col gap-1 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                                <li>
+                                    <NavLink to="/" className={handleNavlinkActive} end>Home</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="menu" className={handleNavlinkActive}>Menu</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="location" className={handleNavlinkActive}>Location</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="about" className={handleNavlinkActive} >About</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="contact" className={handleNavlinkActive}>Contact</NavLink>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <PrimaryButton>Login</PrimaryButton>
                 </div>
-                {isMobileView &&
-                    <div className={` ${isOpen ? "block" : "hidden"} md:block flex justify-center relative`} id="navbar-default">
-                        <ul className="w-fit px-7 font-medium flex flex-col gap-1 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 absolute">
-                            <li>
-                                <NavLink to="/" className={handleNavlinkActive} end>Home</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="menu" className={handleNavlinkActive}>Menu</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="location" className={handleNavlinkActive}>Location</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="about" className={handleNavlinkActive} >About</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="contact" className={handleNavlinkActive}>Contact</NavLink>
-                            </li>
-                        </ul>
-                    </div>
-                }
+                <div className={` ${isOpen ? "flex" : "hidden"} justify-center relative`} id="navbar-default">
+                    <ul className="md:hidden w-fit px-7 font-medium flex flex-col gap-1 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 absolute">
+                        <li>
+                            <NavLink to="/" className={handleNavlinkActive} end>Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="menu" className={handleNavlinkActive}>Menu</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="location" className={handleNavlinkActive}>Location</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="about" className={handleNavlinkActive} >About</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="contact" className={handleNavlinkActive}>Contact</NavLink>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </>
     )

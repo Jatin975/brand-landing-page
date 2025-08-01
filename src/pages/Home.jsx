@@ -15,7 +15,7 @@ export default function Home() {
             >
               Shop Now
             </button>
-            <button type="button" class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-sm lg:text-xl text-sm px-5 py-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 cursor-pointer w-40">Category</button>
+            <button type="button" className="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-sm lg:text-xl text-sm px-5 py-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 cursor-pointer w-40">Category</button>
           </div>
           <p className='text-gray-600 md:text-sm lg:text-xl'>Also Available On</p>
           <div className='flex gap-4 justify-center items-center md:justify-start'>
